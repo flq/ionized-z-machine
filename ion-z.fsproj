@@ -47,7 +47,8 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ionz.fs" />
+    <Compile Include="src\constants.fs" />
+    <Compile Include="src\ionz.fs" />
     <None Include="App.config" />
   </ItemGroup>
   <PropertyGroup>
