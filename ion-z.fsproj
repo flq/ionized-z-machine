@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\constants.fs" />
+    <Compile Include="src\bucket.fs" />
     <Compile Include="src\ionz.fs" />
     <None Include="App.config" />
   </ItemGroup>

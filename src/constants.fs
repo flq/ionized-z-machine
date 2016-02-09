@@ -1,8 +1,11 @@
-module ionz
+module Ionz
+
+type IntMap<'t> = Map<int,'t>
+
+type BitLength = BitLength of int
+type ByteAddress = ByteAddress of int
 
 type BitIndex = BitIndex of int
-type BitLength = BitLength of int
-
 let bit0 = BitIndex 0
 let bit1 = BitIndex 1
 let bit2 = BitIndex 2
@@ -19,3 +22,7 @@ let bit12 = BitIndex 12
 let bit13 = BitIndex 13
 let bit14 = BitIndex 14
 let bit15 = BitIndex 15
+
+let fetchBits (BitIndex high) (BitLength length) word =
+  let mask = ~~~ (-1 <<< length) in
+  (word >>> (high - length + 1)) &&& mask
